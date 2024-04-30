@@ -1,0 +1,16 @@
+.plant-card {
+    border-radius: 25px;
+    background-color: rgba(184, 222, 182, 0.577);
+    padding: 20px;
+    width: 200px;
+    height: 300px;
+}
+.plant-card:hover{
+    background-color: rgba(134, 177, 131, 0.577);
+}
+
+.card-content {
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
