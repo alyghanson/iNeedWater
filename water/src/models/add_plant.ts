@@ -1,1 +1,0 @@
-/**Function for adding a class Plant to a database */
