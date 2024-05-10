@@ -23,10 +23,11 @@ function App() {
 
   return (
     <div className="App">
-      {renderPlants()}
-      <AddPlantCard openModal={toggle}/>
+      <div className="App-card">
+        {renderPlants()}
+        <AddPlantCard openModal={toggle}/>
+      </div>
       <Modal isOpen={isOpen} toggle={toggle}>
-      
         {/* {modalContent} */}
       </Modal>
     </div>
