@@ -12,8 +12,11 @@ export default function Modal(props: ModalProp) {
         <>
         {props.isOpen && (
             <div className="modal-overlay">
-                <div className="modal-box" onClick={props.toggle}>
+                <div className="modal-box">
                     {props.children}
+                    <div className="btn-container">
+                        <button type="button" className="btn" onClick={props.toggle}>&times;</button>
+                    </div>
                 </div>
             </div>
         )}

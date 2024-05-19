@@ -6,7 +6,7 @@
     height: 300px;
     cursor:pointer;
     outline: .5px solid rgb(46, 156, 5);
-    margin: 2%;
+    margin: 1%;
 }
 .add-card:hover{
     background-color: rgba(134, 177, 131, 0.577);

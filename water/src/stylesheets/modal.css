@@ -12,10 +12,21 @@
 }
 
 .modal-box {
+    position: relative;
     display: block;
     background: rgba(190, 242, 241, 0.898);
     width: 70%;
-    height: 70%;
+    height: fit-content;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+.btn-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+button {
+    border: none;
+    border-radius: 45%;
 }
