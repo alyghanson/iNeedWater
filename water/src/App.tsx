@@ -23,6 +23,7 @@ function App() {
     return plants.map(p => <PlantCard key={p.name} plant={p}></PlantCard>)
   }
   function addNewPlant(name: string, weeks: number){
+    /** Creates new plant to add to master list */
     console.log("added a new plant => ")
     console.log("name:", name)
     console.log("weeks:", weeks)
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className='App-header'>iNeedWater, a place to set Watering Schedules for your plant friends. </div>
       <div className="App-card">
         {renderPlants()}
         <AddPlantCard openModal={toggle}/>
