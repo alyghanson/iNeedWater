@@ -14,14 +14,14 @@ function AddPlantForm({ addPlant }: AddPlantFormProps){
     return (
         <div className="add-form">
 
-            <div className="header"> Hi </div>
+            <div className="header"> Who will be watered? </div>
             <div className="form-line">
-                <div className="add-name"> Name: </div>
+                <div className="add-name"> Name: &nbsp;&nbsp;</div>
                 <input type="text" placeholder="Add Name of Plant" value={inputName} onChange={e=>setInputName(e.target.value)}/>
             </div>
 
             <div className="form-line">
-                <div className="add-name"> Weeks between watering: </div>
+                <div className="add-name"> Weeks between watering: &nbsp;&nbsp;</div>
                 <input type="number" placeholder="# weeks between watering" value={inputWeeks} onChange={e=>setInputWeeks(Number(e.target.value))}/>
             </div>
             <button type="button" className="add-btn" onClick={() => addPlant(inputName, inputWeeks)}>ADD PLANT</button>
