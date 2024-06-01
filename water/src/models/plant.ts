@@ -1,8 +1,9 @@
+import {v4 as uuidv4} from 'uuid';
 /**Class of individual plants and associated proporties */
 export class Plant {
     
     // name: string
-    
+    readonly uuid: string
     // waterFrequency: number
     constructor(
         /**Name of plant */
@@ -14,6 +15,7 @@ export class Plant {
         /**Type of plant */
         readonly type: string
     ) {
+        this.uuid = uuidv4();
         // this.name = name
         // this.waterFrequency = waterFreqency
     }

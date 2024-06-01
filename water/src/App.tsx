@@ -22,7 +22,7 @@ function App() {
   const [plants, setPlants] = useState<Plant[]>([]);
 
   function renderPlants(){
-    return plants.map(p => <PlantCard key={p.name} plant={p} openModal={() => setModalContent(<PlantDetails plant={p}/>)}></PlantCard>)
+    return plants.map(p => <PlantCard key={p.name} plant={p} openModal={() => setModalContent(<PlantDetails plant={p} deletePlant={deletePlant}/>)}></PlantCard>)
   }
   function addNewPlant(name: string, weeks: number, notes: string, type: string){
     /** Creates new plant to add to master list */
@@ -36,6 +36,9 @@ function App() {
 
     //Toggle the modal once new plant is added
     setModalContent(undefined);
+  }
+  function deletePlant(plant: Plant){
+    setPlants(plants.filter((p)=>p.uuid !== plant.uuid));
   }
 
   console.log('isOpen:', !!modalContent)

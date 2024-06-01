@@ -5,9 +5,10 @@ import { Plant } from "../../models/plant";
 interface PlantDetailsProps {
     /** Function to add a new plant */
     plant: Plant;
+    deletePlant: (plant:Plant) => void;
 }
 
-function PlantDetails({ plant }: PlantDetailsProps){
+function PlantDetails({ plant, deletePlant }: PlantDetailsProps){
 
     return (
         <><div>Name: {plant.name}
@@ -15,7 +16,8 @@ function PlantDetails({ plant }: PlantDetailsProps){
             <div> Type: {plant.type}
             </div><div>Weeks between watering: {plant.waterFrequency}
             </div><div>Special Notes: {plant.notes}
-            </div></>
+            </div>
+        <div ><button type="button" onClick={() => deletePlant(plant)}>Delete PLANT</button></div></>
 
     )
 }
