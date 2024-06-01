@@ -10,7 +10,9 @@ export class Plant {
         /**Watering freqency in days */
         readonly waterFrequency: number,
         /**Special Notes: */
-        readonly notes: string
+        readonly notes: string,
+        /**Type of plant */
+        readonly type: string
     ) {
         // this.name = name
         // this.waterFrequency = waterFreqency

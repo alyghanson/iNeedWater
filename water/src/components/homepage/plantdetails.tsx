@@ -12,9 +12,9 @@ function PlantDetails({ plant }: PlantDetailsProps){
     return (
         <><div>Name: {plant.name}
         </div>
-        <div>Weeks between watering: {plant.waterFrequency}
-        </div>
-        <div>Special Notes: {plant.notes}
+            <div> Type: {plant.type}
+            </div><div>Weeks between watering: {plant.waterFrequency}
+            </div><div>Special Notes: {plant.notes}
             </div></>
 
     )
