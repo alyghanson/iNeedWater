@@ -24,13 +24,14 @@ function App() {
   function renderPlants(){
     return plants.map(p => <PlantCard key={p.name} plant={p} openModal={() => setModalContent(<PlantDetails plant={p}/>)}></PlantCard>)
   }
-  function addNewPlant(name: string, weeks: number){
+  function addNewPlant(name: string, weeks: number, notes: string){
     /** Creates new plant to add to master list */
     console.log("added a new plant => ")
     console.log("name:", name)
     console.log("weeks:", weeks)
+    console.log("notes:", notes)
 
-    setPlants([... plants, new Plant(name, weeks)])
+    setPlants([... plants, new Plant(name, weeks, notes)])
 
     //Toggle the modal once new plant is added
     setModalContent(undefined);
