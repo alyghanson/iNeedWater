@@ -13,6 +13,7 @@ function PlantDetails({ plant, deletePlant }: PlantDetailsProps){
     return (
         <><div>Name: {plant.name}
         </div>
+        <div>Last watered on: {plant.lastWatering.toLocaleString()}</div>
             <div> Type: {plant.type}
             </div><div>Weeks between watering: {plant.waterFrequency}
             </div><div>Special Notes: {plant.notes}

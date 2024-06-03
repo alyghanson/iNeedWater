@@ -13,9 +13,14 @@ export class Plant {
         /**Special Notes: */
         readonly notes: string,
         /**Type of plant */
-        readonly type: string
+        readonly type: string,
+        /**Date of Last watering */
+        readonly lastWatering=new Date(),
+        /**Image uploaded by user */
+        readonly inputPicture?: string
     ) {
         this.uuid = uuidv4();
+
 
         // this.name = name
         // this.waterFrequency = waterFreqency
