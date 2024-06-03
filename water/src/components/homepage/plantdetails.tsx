@@ -6,9 +6,10 @@ interface PlantDetailsProps {
     /** Function to add a new plant */
     plant: Plant;
     deletePlant: (plant:Plant) => void;
+    updateLastWatering:(plant:Plant) => void;
 }
 
-function PlantDetails({ plant, deletePlant }: PlantDetailsProps){
+function PlantDetails({ plant, deletePlant, updateLastWatering }: PlantDetailsProps){
 
     return (
         <><div>Name: {plant.name}
@@ -18,7 +19,8 @@ function PlantDetails({ plant, deletePlant }: PlantDetailsProps){
             </div><div>Weeks between watering: {plant.waterFrequency}
             </div><div>Special Notes: {plant.notes}
             </div>
-        <div ><button type="button" onClick={() => deletePlant(plant)}>Delete PLANT</button></div></>
+        <div ><button type="button" onClick={() => deletePlant(plant)}>Delete Plant</button>&nbsp;&nbsp;
+        <button type="button" onClick={() => updateLastWatering(plant)}>Water Plant</button></div></>
 
     )
 }

@@ -5,7 +5,6 @@ import 'semantic-ui-css/semantic.min.css'
 import { Plant } from './models/plant';
 import PlantCard from './components/homepage/plantcard';
 import AddPlantCard from './components/homepage/addcard';
-import useModal from './hooks/useModal';
 import Modal from './components/common/modal';
 import AddPlantForm from './components/homepage/addplantform';
 import { useState } from 'react';
@@ -22,7 +21,7 @@ function App() {
   const [plants, setPlants] = useState<Plant[]>([]);
 
   function renderPlants(){
-    return plants.map(p => <PlantCard key={p.uuid} plant={p} openModal={() => setModalContent(<PlantDetails plant={p} deletePlant={deletePlant}/>)}></PlantCard>)
+    return plants.map(p => <PlantCard key={p.uuid} plant={p} openModal={() => setModalContent(<PlantDetails plant={p} deletePlant={deletePlant} updateLastWatering={updateLastWatering}/>)}></PlantCard>)
   }
   function addNewPlant(plant: Plant){
     /** Creates new plant to add to master list */
@@ -37,6 +36,11 @@ function App() {
     setModalContent(undefined);
 
   }
+  function updateLastWatering(plant: Plant){
+    plant.lastWatering = new Date();
+    setModalContent(<PlantDetails plant={plant} deletePlant={deletePlant} updateLastWatering={updateLastWatering}/>)
+  }
+
 
   console.log('isOpen:', !!modalContent)
 

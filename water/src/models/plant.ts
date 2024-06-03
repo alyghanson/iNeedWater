@@ -15,7 +15,7 @@ export class Plant {
         /**Type of plant */
         readonly type: string,
         /**Date of Last watering */
-        readonly lastWatering=new Date(),
+        public lastWatering=new Date(),
         /**Image uploaded by user */
         readonly inputPicture?: string
     ) {
