@@ -39,6 +39,8 @@ function App() {
   }
   function deletePlant(plant: Plant){
     setPlants(plants.filter((p)=>p.uuid !== plant.uuid));
+    setModalContent(undefined);
+
   }
 
   console.log('isOpen:', !!modalContent)

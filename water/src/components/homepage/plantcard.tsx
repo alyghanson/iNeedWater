@@ -11,6 +11,7 @@ function PlantCard({plant, openModal}: PlantCardProps) {
     return (
       <div className="plant-card" onClick={openModal}>
         <div className="card-content">{plant.name}</div>
+        <img className ="plant-image" src="/images/default-plant.png"></img>
       </div>
     );
   }

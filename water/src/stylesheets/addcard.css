@@ -1,6 +1,6 @@
 .add-card {
     border-radius: 25px;
-    background-color: rgba(184, 222, 182, 0.577);
+    background-color: #93a340;
     padding: 20px;
     width: 200px;
     height: 300px;
@@ -9,7 +9,7 @@
     margin: 1%;
 }
 .add-card:hover{
-    background-color: rgba(134, 177, 131, 0.577);
+    background-color: #435967;
 }
 
 .add-card-content {

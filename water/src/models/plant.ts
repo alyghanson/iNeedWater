@@ -16,7 +16,7 @@ export class Plant {
         readonly type: string
     ) {
         this.uuid = uuidv4();
+
         // this.name = name
         // this.waterFrequency = waterFreqency
-    }
-}
+}}
