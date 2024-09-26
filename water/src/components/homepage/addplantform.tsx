@@ -62,4 +62,3 @@ export default AddPlantForm
 function getDate(): Date | (() => Date) {
     throw new Error("Function not implemented.");
 }
-//add close button to modal common 
